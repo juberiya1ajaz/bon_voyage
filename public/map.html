@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .mapwrapper {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .buttomwrap {
+            position: absolute;
+            top: 30px;
+            z-index: 5;
+            background-color: rgba(0, 0, 255, 0.527);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .mapboxgl-ctrl-attrib {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="buttomwrap">
+        <span>Add this location to your journey- </span>
+        <div>
+            <!-- {% csrf_token %} -->
+            <input type="text" name="longi" id="longi" style="display: none;">
+            <input type="text" name="lati" id="lati" style="display: none;">
+            <button id="addtolocation" type="submit" onclick="add()">Add location</button>
+        </div>
+    </div>
+    <div class="mapwrapper">
+        <div id='map' style='width: 100vw; height: 100vh;'></div>
+    </div>
+    <script>
+        var longi = 0;
+        var lati = 0;
+        if (localStorage.location) {
+            console.log("haiiii");
+        }
+        else {
+            console.log("nahi hai");
+            localStorage.setItem('curent_count', 1);
+            localStorage.setItem('location', '{}');
+        }
+        let loc = JSON.parse(localStorage.location);
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = dd + '/' + mm + '/' + yyyy;
+
+
+        function showPosition(position) {
+            lat = position.coords.latitude
+            long = position.coords.longitude
+            longi = long;
+            lati = lat;
+            document.getElementById('lati').setAttribute('value', lat)
+            document.getElementById('longi').setAttribute('value', long)
+
+            current(lat, long)
+        }
+        console.log(longi, lati)
+        function current(lat1, long1) {
+            mapboxgl.accessToken = 'pk.eyJ1IjoibmV3dXNlcjEyMzQ1NiIsImEiOiJja3I5MnVybHgwaW5oMnpwOGRmYTlyeDR0In0.5Z9qCY7hNcRWYqfjb6aJJQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [long1, lat1],
+                zoom: 4
+            });
+
+            // Set options
+            for(let x = 1;x<=Object.values(loc).length;x++){
+                var marker = new mapboxgl.Marker({
+                    color: "#FF0000",
+                    draggable: false
+                }).setLngLat([loc[x][0], loc[x][1]])
+                    .addTo(map);
+            }
+        }
+    </script>
+    <script>
+        var x = document.getElementById("demo");
+
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+
+
+    </script>
+
+    <script>
+
+
+        function add() {
+            let longi = document.getElementById('longi').value;
+            let lati = document.getElementById('lati').value
+            loc[localStorage.curent_count] = [longi,lati];
+            localStorage.location = JSON.stringify(loc);
+            localStorage.curent_count = Number(localStorage.curent_count) + 1;
+        }
+    </script>
+</body>
+
+</html>
