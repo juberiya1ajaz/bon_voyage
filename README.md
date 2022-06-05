@@ -1,4 +1,5 @@
 # The SØLØ  BaGpackr
+Let's pack our bags and wander through the mountains and beaches
 
 ## 💡 Inspiration
 For many folks, there is one thing that is the epitome of self-indulgence, and that indulgence is none other than solo traveling. But Alas,  for women and teenage solo travelers, it comes with many paranoid thoughts. It is tough to be a woman and a solo traveler simultaneously.
