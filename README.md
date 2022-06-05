@@ -1,4 +1,4 @@
-# The SØLØ bagpackr
+# The SØLØ  BaGpackr
 
 ## 💡 Inspiration
 For many folks, there is one thing that is the epitome of self-indulgence, and that indulgence is none other than solo traveling. But Alas,  for women and teenage solo travelers, it comes with many paranoid thoughts. It is tough to be a woman and a solo traveler simultaneously.
@@ -49,7 +49,7 @@ The application is built on these key components:
 - Working effectively under pressure
 
 
-## 🚀 What's next for The solo bagpackr
-- We aim to develop this platform and collaborate with travelling agencies to make it a genuine free product that benefits everyone and introduces new features and other enhancements.
+## 🚀 What's next for The The SØLØ  BaGpackr
+- We aim to develop this platform and collaborate with travel agencies to make it a genuine free product that benefits everyone and introduces new features and other enhancements.
 - Building a mobile app
 
