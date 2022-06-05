@@ -7,6 +7,7 @@ import FriendsChatroom from '../pages/friends/Chatroom'
 import StoriesChatroom from '../pages/stories/Chatroom'
 import HotelChatroom from '../pages/hotel/Chatroom'
 import PlacesChatroom from '../pages/places/Chatroom'
+import Sos from '../pages/Sos'
 
 export default function Main() {
     return (
@@ -20,6 +21,7 @@ export default function Main() {
                 <Route path="/chat/stories" element={<StoriesChatroom />} />
                 <Route path="/chat/hotel" element={<HotelChatroom />} />
                 <Route path="/chat/places" element={<PlacesChatroom />} />
+                <Route path="/sos" element={<Sos />} />
             </Routes>
         </BrowserRouter>
     )
