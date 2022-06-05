@@ -23,8 +23,8 @@ function LogIn() {
 
                     <div className="md:flex md:flex-col md:justify-center lg:pr-16">
 
-                        <h2 className="mb-4 text-[3.4rem] self-center font-bold tracking-wider text-white">
-                            APP NAME
+                        <h2 className="mb-4 text-[2.7rem] self-center font-bold tracking-wider text-white">
+                            The solo bagpackr
                         </h2>
 
                         <div className='grid place-items-center'>

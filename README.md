@@ -1,4 +1,4 @@
-# APP NAME
+# The solo bagpackr
 
 ## 💡 Inspiration
 
@@ -33,6 +33,6 @@
 
 - Collaboration with other developers.
 
-## 🚀 What's next for APP NAME
+## 🚀 What's next for The solo bagpackr
 
 - Building a mobile app
