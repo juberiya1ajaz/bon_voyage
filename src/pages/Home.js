@@ -11,7 +11,7 @@ export default function Home() {
             <div className='md:grid md:grid-cols-2 items-center  pt-10'>
                 <div className='bg-green-200 border-2 border-r-8 border-b-8 border-black p-5 rounded-lg'>
                     <h1 className='text-3xl md:text-6xl'>Who we are</h1>
-                    <p className='text-xl md:text-2xl py-4 tracking-wider'>About the web app</p>
+                    <p className='text-xl py-4 tracking-wider text-justify'>For many folks, there is one thing that is the epitome of self-indulgence, and that indulgence is none other than solo traveling. But Alas, for women and teenage solo travelers, it comes with many paranoid thoughts. It is tough to be a woman and a solo traveler simultaneously. To tackle this issue, We focused on developing a feasible solution for the safety of solo travelers throughout the brainstorming process.</p>
 
                     <Link to="/map">
                         <button className='bg-yellow-200 border-2 hover:bg-yellow-300 border-r-4 border-b-4 border-black text-black font-bold py-2 px-8 rounded-md text-xl md:text-2xl'>Map</button>
@@ -29,7 +29,7 @@ export default function Home() {
                 </div>
                 <div className='bg-yellow-200 border-2 border-r-8 border-b-8 border-black p-10 rounded-lg  '>
                     <h1 className='text-3xl md:text-5xl'>What else do we have</h1>
-                    <p className='text-xl md:text-2xl py-4 tracking-wider'> APP NAME is a web app where you can:
+                    <p className='text-xl md:text-2xl py-4 tracking-wider'> The SØLØ BaGpackr is a web app where you can:
                     </p>
                     <ul className="text-xl">
                         <li className="list-disc">Pin the locations you visited.</li>

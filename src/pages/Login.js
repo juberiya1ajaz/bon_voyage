@@ -21,7 +21,7 @@ function LogIn() {
 
           <div className="md:flex md:flex-col md:justify-center lg:pr-16">
             <h2 className="mb-4 text-[2.7rem] self-center font-bold tracking-wider text-black">
-              APP NAME
+              The SØLØ BaGpackr
             </h2>
 
             <div className="grid place-items-center">
